@@ -1,6 +1,7 @@
 import tkinter as tk
 from tkinter import ttk
-from tkinter import Button, Menu, Toplevel, font
+from tkinter import Button, Menu, Toplevel
+from gui.pacientes import create_content
 
 master = tk.Tk()
 class Home:    
@@ -42,6 +43,9 @@ class Home:
         tab_control.add(tab1, text='Tab 1')
         tab2 = ttk.Frame(tab_control)
         tab_control.add(tab2, text='Tab 2')
+              
+        # Llamamos a la función create_content del archivo externo para agregar el contenido a tab1
+        create_content(tab1)
         
         master.mainloop()
         
